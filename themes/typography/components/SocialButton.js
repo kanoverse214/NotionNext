@@ -68,7 +68,7 @@ const SocialButton = () => {
             target='_blank'
             rel='noreferrer'
             title={'email'}
-            href={`mailto:${siteConfig('CONTACT_EMAIL')}`}>
+            href={`mailto:${Buffer.from(siteConfig('CONTACT_EMAIL'), 'base64').toString('utf-8')}`}>
             <i className='fas fa-envelope transform hover:scale-125 duration-150' />
           </a>
         )}
